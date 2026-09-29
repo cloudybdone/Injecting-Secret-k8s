@@ -430,22 +430,5 @@ my-app-pod.yaml
 
 ---
 
-## Conclusion
-
-This lab demonstrates a basic but important Kubernetes pattern: creating a Secret and injecting selected Secret keys into a Pod as environment variables.
-
-The core relationship is:
-
-```text
-Secret
-  ↓
-secretKeyRef
-  ↓
-Environment Variable
-  ↓
-Container
-  ↓
-Application
-```
 
 Once this flow is clear, it becomes much easier to understand how Kubernetes workloads consume sensitive configuration without placing the original values directly in the application container definition.
